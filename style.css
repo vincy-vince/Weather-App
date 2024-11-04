@@ -10,7 +10,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-image: url(dark-blue-nature-background.webp);
+  background-image: url(images/dark-blue-nature-background.webp);
   background-repeat: no-repeat;
   background-size: cover;
   /* background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143)); */
@@ -19,7 +19,7 @@
 }
 
 .body-hot {
-  background-image: url(Screenshot-summer.png);
+  background-image: url(images/Screenshot-summer.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(119, 30, 7);
@@ -27,15 +27,17 @@
 }
 
 .body-cold {
-  background-image: url(istockphoto-455011625-612x612.jpg);
+  background-image:url(Giffs/top.gif);
   background-repeat: no-repeat;
   background-size: cover;
   /* background: linear-gradient(rgb(169, 230, 248), rgb(20, 208, 255)); */
   /* color:   rgb(105, 103, 103) */
-  color: black;
+  color: rgb(255, 255, 255);
+  /* rgb(138, 52, 26) */
+  text-shadow: 3px 3px 3px rgb(149, 44, 163);
 }
 .body-green {
-  background-image: url(green-nature-leaf-with-dew.jpg);
+  background-image: url(images/green-nature-leaf-with-dew.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(34, 9, 1);
@@ -43,7 +45,7 @@
 }
 
 .body-rain {
-  background: url(rain_picture.jpg);
+  background: url(images/rain_picture.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: rgba(0, 15, 17, 0.966);
@@ -69,6 +71,7 @@
   font-size: 30px;
   font-weight: bold;
   margin: auto;
+  display: flex;
 }
 
 .degree {

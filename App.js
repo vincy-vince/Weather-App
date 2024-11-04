@@ -37,6 +37,7 @@ window.addEventListener("load", () => {
     express.innerHTML = "Cool!";
   }
 
+  //put this in a separate function.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       long = position.coords.longitude;
@@ -53,3 +54,6 @@ window.addEventListener("load", () => {
     });
   }
 });
+//According to the gn lat and long the teperature changes.
+// forEach temperature function generate the html and UI..
+// importatanly `${temperature}`
