@@ -14,7 +14,12 @@ if(tempInner >= 30){
   console.log(bodyEle);
 
   bodyEle.classList.add('body-cold');
-} 
+} else if(tempInner == 24){
+  const bodyEle = document.querySelector('.js-body');
+  console.log(bodyEle);
+
+  bodyEle.classList.add('body-green');
+}
 else{
   const bodyEle = document.querySelector('.js-body');
   bodyEle.classList.remove('body-url')

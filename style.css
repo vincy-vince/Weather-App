@@ -23,6 +23,9 @@
   background: linear-gradient(rgb(169, 230, 248), rgb(20, 208, 255));
   color:rgb(105, 103, 103)
 }
+.body-green{
+  background: linear-gradient(rgb(67, 150, 67) , rgb(66, 207, 58)); 
+}
 
 .location,
 .temperature {
@@ -39,6 +42,8 @@
 
 .degree {
   font-size: 20px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .degree-section {
@@ -50,6 +55,8 @@
 .f-span {
   margin: 10px;
   font-size: 30px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .degree-section h2 {
