@@ -10,23 +10,44 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  background-image: url(dark-blue-nature-background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143)); */
   font-family: sans-serif;
-  color: white;
+  color: rgba(248, 145, 48, 0.973);
 }
 
 .body-hot {
-  background: linear-gradient(rgb(241, 239, 104), rgb(250, 95, 5));
+  background-image: url(Screenshot-summer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(119, 30, 7);
+  /* background: linear-gradient(rgb(241, 239, 104), rgb(250, 95, 5)); */
 }
 
-.body-cold{
-  background: linear-gradient(rgb(169, 230, 248), rgb(20, 208, 255));
-  color:rgb(105, 103, 103)
+.body-cold {
+  background-image: url(istockphoto-455011625-612x612.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(rgb(169, 230, 248), rgb(20, 208, 255)); */
+  /* color:   rgb(105, 103, 103) */
+  color: black;
 }
-.body-green{
-  background: linear-gradient(rgb(67, 150, 67) , rgb(66, 207, 58)); 
+.body-green {
+  background-image: url(green-nature-leaf-with-dew.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(34, 9, 1);
+  /* background: linear-gradient( rgb(66, 207, 58),rgb(43, 138, 43));  */
 }
 
+.body-rain {
+  background: url(rain_picture.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgba(0, 15, 17, 0.966);
+}
 .location,
 .temperature {
   height: 30vh;
@@ -36,14 +57,25 @@
   align-items: center;
 }
 
+.location-timezone {
+  font-size: 45px;
+}
+
 .temperature {
   flex-direction: column;
+}
+
+.temperature-description {
+  font-size: 30px;
+  font-weight: bold;
+  margin: auto;
 }
 
 .degree {
   font-size: 20px;
   display: flex;
   align-items: flex-start;
+  margin: auto;
 }
 
 .degree-section {
