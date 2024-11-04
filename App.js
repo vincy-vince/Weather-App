@@ -1,6 +1,51 @@
 window.addEventListener("load", () => {
-  let long;
-  let lat;
+  const urlParams = new URLSearchParams(window.location.search);
+  const location = urlParams.get("loc");
+  const lat = urlParams.get("lat");
+  const long = urlParams.get("long");
+
+  if (location !== null) {
+    fetchApi(location);
+  } else if (lat !== null && long !== null) {
+    fetchApi(`${lat},${long}`);
+  } else {
+    navigator.geolocation.getCurrentPosition((position) => {
+      let _lat = position.coords.latitude;
+      let _long = position.coords.longitude;
+
+      fetchApi(`${_lat},${_long}`);
+    });
+  }
+});
+
+function fetchApi(location) {
+  const api = `https://api.tomorrow.io/v4/weather/realtime?location=${location}&units=metric&apikey=8WElWxRqhNuuFwfSeSMTPraPSVmYS2FZ`;
+  fetch(api)
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      const temperature = data.data.values.temperature;
+      templateGenerator(temperature);
+    });
+}
+
+function templateGenerator(temperature) {
+  const template = `<div class="degree-section">
+      <h2 class="temperature-degree">${temperature}</h2>
+      <span class="f-span">
+        <span class="degree">&deg; </span>
+        C
+      </span>
+    </div>
+    <div class="temperature-description 
+    js-temperature-description">`;
+
+  document.querySelector(".temperature").innerHTML = template;
+  uiDisplay();
+}
+
+function uiDisplay() {
   let temp = document.querySelector(".temperature-degree");
   let tempInner = temp.innerHTML;
 
@@ -8,7 +53,7 @@ window.addEventListener("load", () => {
     const bodyEle = document.querySelector(".js-body");
 
     bodyEle.classList.add("body-hot");
-  } else if (tempInner <= 10) {
+  } else if (tempInner <= 19) {
     const bodyEle = document.querySelector(".js-body");
 
     const express = document.querySelector(".js-temperature-description");
@@ -36,24 +81,4 @@ window.addEventListener("load", () => {
     const express = document.querySelector(".js-temperature-description");
     express.innerHTML = "Cool!";
   }
-
-  //put this in a separate function.
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      long = position.coords.longitude;
-      lat = position.coords.latitude;
-
-      const api = `https://api.tomorrow.io/v4/weather/realtime?location=${lat},${long}&units=metric&apikey=8WElWxRqhNuuFwfSeSMTPraPSVmYS2FZ`;
-      fetch(api)
-        .then((res) => {
-          return res.json();
-        })
-        .then((data) => {
-          const temperature = data.data.values.temperature;
-        });
-    });
-  }
-});
-//According to the gn lat and long the teperature changes.
-// forEach temperature function generate the html and UI..
-// importatanly `${temperature}`
+}
