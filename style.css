@@ -13,7 +13,6 @@
   background-image: url(images/dark-blue-nature-background.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143)); */
   font-family: sans-serif;
   color: rgba(248, 145, 48, 0.973);
 }
@@ -23,15 +22,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(119, 30, 7);
-  /* background: linear-gradient(rgb(241, 239, 104), rgb(250, 95, 5)); */
 }
 
 .body-cold {
-  background-image:url(Giffs/top.gif);
+  background-image: url(Giffs/top.gif);
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: linear-gradient(rgb(169, 230, 248), rgb(20, 208, 255)); */
-  /* color:   rgb(105, 103, 103) */
   color: rgb(255, 255, 255);
   /* rgb(138, 52, 26) */
   text-shadow: 3px 3px 3px rgb(149, 44, 163);
@@ -41,7 +37,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(34, 9, 1);
-  /* background: linear-gradient( rgb(66, 207, 58),rgb(43, 138, 43));  */
 }
 
 .body-rain {

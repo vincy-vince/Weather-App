@@ -48,37 +48,22 @@ function templateGenerator(temperature) {
 function uiDisplay() {
   let temp = document.querySelector(".temperature-degree");
   let tempInner = temp.innerHTML;
+  const bodyEle = document.querySelector(".js-body");
+  const express = document.querySelector(".js-temperature-description");
 
   if (tempInner >= 30) {
-    const bodyEle = document.querySelector(".js-body");
-
     bodyEle.classList.add("body-hot");
   } else if (tempInner <= 19) {
-    const bodyEle = document.querySelector(".js-body");
-
-    const express = document.querySelector(".js-temperature-description");
     express.innerHTML = "its too cold - freezing!";
-
     bodyEle.classList.add("body-cold");
   } else if (tempInner == 24) {
-    const bodyEle = document.querySelector(".js-body");
-
     bodyEle.classList.add("body-green");
-
-    const express = document.querySelector(".js-temperature-description");
     express.innerHTML = "Perfect weather!";
   } else if (tempInner == 23) {
-    const bodyEle = document.querySelector(".js-body");
-
     bodyEle.classList.add("body-rain");
-
-    const express = document.querySelector(".js-temperature-description");
     express.innerHTML = "Unwrap your Umbrella!";
   } else {
-    const bodyEle = document.querySelector(".js-body");
     bodyEle.classList.remove("body-url");
-
-    const express = document.querySelector(".js-temperature-description");
     express.innerHTML = "Cool!";
   }
 }
