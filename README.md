@@ -1,4 +1,4 @@
-[12:06 PM, 6/27/2025] vincyvince510: # ⛅ Weather App
+ # ⛅ Weather App
 
 A dynamic and visually engaging *Weather App* built with *HTML, **CSS, and **Vanilla JavaScript*.  
 This project fetches real-time weather data and adapts the background based on the current temperature for an interactive user experience.
